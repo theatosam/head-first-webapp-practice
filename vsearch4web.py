@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 def log_request(req: 'flask_requet', res: str) -> None:
     with open('vsearch.log', 'a') as log:
-        print(req, res, file=log)
+        print(str(dir(req)), res, file=log)
 
 
 @app.route('/search4', methods=['POST'])
